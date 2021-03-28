@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="main.css"/>
         <!--Feel free to add more CSS files as needed-->
         <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
     </head>
 <body>
     <div class="header">
@@ -19,8 +21,30 @@
             <div id="graph2"></div><br/>
         </div>
         <div class="col-lg-6">
+            <label for="genres">Select a genre: </label>
+            <select id="genres" onchange="changeGenre(this)">
+                <option value="Action" selected>Action</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Fighting">Fighting</option>
+                <option value="Platform">Platform</option>
+                <option value="Puzzle">Puzzle</option>
+                <option value="Racing">Racing</option>
+                <option value="Role-Playing">Role-Playing</option>
+                <option value="Shooter">Shooter</option>
+                <option value="Simulation">Simulation</option>
+                <option value="Sports">Sports</option>
+                <option value="Strategy">Strategy</option>
+                <option value="Misc">Misc</option>
+            </select> 
             <div id="graph3"></div>
         </div>
+    </div>
+    <div class="container">
+        <p> 1. I answer the first question by constructing a bar chart that shows the counts of the top 10 video games of all time. The second question was answered by creating a map and shading in the regions with the appropriate color to represent the most popular genre in that region. A map legend located in the Indian Ocean demonstrates the corresponding genre for each color. Additionally, hovering over a region will cause a tooltip to pop-up that contains the most popular genre of that region. For the third question, I created a dropdown menu that allows you select a particular genre (default genre is action). Every time you select a genre, the bar chart will update to show the top 10 publishers for that genre, making it easy to see the most popular publisher for that genre. </p>
+        <p> 2. D3 was helpful because it easily integrates with existing html, css, and javascript and had clear documentation, making it easier to pick up. Secondly, it contains useful libraries for unique maps, such as the library I used for the map projection. Finally, D3 made it simple for me to add axis, labels, counts, and bars to my graphs (most of the work just involved invoking the correct methods). </p>
+        <p> 3. D3 would not be a helpful tool for data visualization for people who are not familiar with js, css, or html. Thus, it might be a more inaccessible tool for data visualization compared to another language like R. Secondly, I found it difficult to handle the data directly in D3; I found myself creating a python program to generate new csv files and find the information I needed for the assignment. Finally, D3's strength that it works well within existing html and css frameworks also means it is limited by those exact same frameworks and suffer from a lack of flexibility. </p>
+        <p> 4. I read the article "Why Accessibility Is At the Heart of Data Visualization." I believe my dashboard is more accessible for colorblind users, as I tried to pick color palettes that avoid confusion (e.g. using red/blue instead of red and green). I also added the counts above each bar in the bar charts and a tooltip for the map, giving colorblind users another method of gathering information. Another step I could have taken would be to use different shading patterns in my map, but I couldn't figure out how to add different patterns. Blind users might have more difficulty intepreting my dashboard. I could have found ways to add hidden data tables to my dashboard, allowing users to tab through each data point in a SVG, or use sonification. </p>
+        <p> 5. Like I mentioned above, I could have added different shading patterns, added sonification, added hidden data tables, and allowed users to tab through SVG data points. My primary obstacles to adding these features were time constraints and lack of knowledge. If I had more time and familiarity with HTML/CSS/JS, I would have tried to add these features. In addition, I feel like the data tables I'd add would be too large, so it wouldn't have been practical to add hidden data tables. </p>
     </div>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
