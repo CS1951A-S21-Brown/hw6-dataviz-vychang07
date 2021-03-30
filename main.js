@@ -8,9 +8,9 @@ let graph_1_width = (MAX_WIDTH / 2) - 10, graph_1_height = 350;
 let graph_2_width = (MAX_WIDTH / 2) - 10, graph_2_height = graph_2_width * 3 / 4;
 let graph_3_width = (MAX_WIDTH / 2), graph_3_height = 575;
 
-let file_1 = "/data/video_games.csv";
-let file_2 = "/data/continents.json";
-let file_3 = "/data/top_publishers.csv";
+let file_1 = "./data/video_games.csv";
+let file_2 = "./data/continents.json";
+let file_3 = "./data/top_publishers.csv";
 
 let svg_1 = d3.select("#graph1")
 	.append("svg")
